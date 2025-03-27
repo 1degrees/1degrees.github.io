@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>二、 变量、作用域和内存问题. | 灯塔</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="前端技术学习交流分享">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e9c6398.css" as="style"><link rel="preload" href="/assets/js/app.3fb25db5.js" as="script"><link rel="preload" href="/assets/js/2.59014ece.js" as="script"><link rel="preload" href="/assets/js/1.1ee2bd06.js" as="script"><link rel="preload" href="/assets/js/70.fd34ac83.js" as="script"><link rel="prefetch" href="/assets/js/10.1deac060.js"><link rel="prefetch" href="/assets/js/100.71e6a0a8.js"><link rel="prefetch" href="/assets/js/101.6d133a64.js"><link rel="prefetch" href="/assets/js/102.45a9facf.js"><link rel="prefetch" href="/assets/js/103.f4c6968c.js"><link rel="prefetch" href="/assets/js/104.bb576e80.js"><link rel="prefetch" href="/assets/js/105.557c9629.js"><link rel="prefetch" href="/assets/js/106.b414582a.js"><link rel="prefetch" href="/assets/js/107.18a13540.js"><link rel="prefetch" href="/assets/js/11.ab35c24e.js"><link rel="prefetch" href="/assets/js/12.cc133464.js"><link rel="prefetch" href="/assets/js/13.2f71f789.js"><link rel="prefetch" href="/assets/js/14.03825d58.js"><link rel="prefetch" href="/assets/js/15.ea37f0ce.js"><link rel="prefetch" href="/assets/js/16.14e11910.js"><link rel="prefetch" href="/assets/js/17.d82649f9.js"><link rel="prefetch" href="/assets/js/18.23f702ad.js"><link rel="prefetch" href="/assets/js/19.ef644c8b.js"><link rel="prefetch" href="/assets/js/20.6846ea6c.js"><link rel="prefetch" href="/assets/js/21.af3c54b5.js"><link rel="prefetch" href="/assets/js/22.350028a7.js"><link rel="prefetch" href="/assets/js/23.6fbf7b26.js"><link rel="prefetch" href="/assets/js/24.fe418ed4.js"><link rel="prefetch" href="/assets/js/25.e0c7890d.js"><link rel="prefetch" href="/assets/js/26.2a70f863.js"><link rel="prefetch" href="/assets/js/27.ddc798d7.js"><link rel="prefetch" href="/assets/js/28.d1667085.js"><link rel="prefetch" href="/assets/js/29.b1b60a98.js"><link rel="prefetch" href="/assets/js/3.a1be5b13.js"><link rel="prefetch" href="/assets/js/30.f040d392.js"><link rel="prefetch" href="/assets/js/31.faedaea8.js"><link rel="prefetch" href="/assets/js/32.9a8b4cee.js"><link rel="prefetch" href="/assets/js/33.bdf8f280.js"><link rel="prefetch" href="/assets/js/34.99ad57bc.js"><link rel="prefetch" href="/assets/js/35.21426b80.js"><link rel="prefetch" href="/assets/js/36.56960109.js"><link rel="prefetch" href="/assets/js/37.f31dd627.js"><link rel="prefetch" href="/assets/js/38.4cb67a19.js"><link rel="prefetch" href="/assets/js/39.fb67e8dc.js"><link rel="prefetch" href="/assets/js/4.1015aec1.js"><link rel="prefetch" href="/assets/js/40.ea27eb52.js"><link rel="prefetch" href="/assets/js/41.09beb0d7.js"><link rel="prefetch" href="/assets/js/42.b60ee9b1.js"><link rel="prefetch" href="/assets/js/43.c8d7975c.js"><link rel="prefetch" href="/assets/js/44.da554ec7.js"><link rel="prefetch" href="/assets/js/45.baa5cf19.js"><link rel="prefetch" href="/assets/js/46.11f7ce67.js"><link rel="prefetch" href="/assets/js/47.cfef4d41.js"><link rel="prefetch" href="/assets/js/48.7b140205.js"><link rel="prefetch" href="/assets/js/49.55cb3316.js"><link rel="prefetch" href="/assets/js/5.e20f6a0c.js"><link rel="prefetch" href="/assets/js/50.ff41f546.js"><link rel="prefetch" href="/assets/js/51.951f6c76.js"><link rel="prefetch" href="/assets/js/52.cb686cbd.js"><link rel="prefetch" href="/assets/js/53.fdc0d4ff.js"><link rel="prefetch" href="/assets/js/54.4dcbfbe8.js"><link rel="prefetch" href="/assets/js/55.71243bbf.js"><link rel="prefetch" href="/assets/js/56.f6275a4e.js"><link rel="prefetch" href="/assets/js/57.f2a3c077.js"><link rel="prefetch" href="/assets/js/58.397ba8c6.js"><link rel="prefetch" href="/assets/js/59.1e6ece35.js"><link rel="prefetch" href="/assets/js/6.37a52b4b.js"><link rel="prefetch" href="/assets/js/60.eca7eba7.js"><link rel="prefetch" href="/assets/js/61.0bc7e376.js"><link rel="prefetch" href="/assets/js/62.3c4a2273.js"><link rel="prefetch" href="/assets/js/63.db441081.js"><link rel="prefetch" href="/assets/js/64.495493fb.js"><link rel="prefetch" href="/assets/js/65.ed0d4ded.js"><link rel="prefetch" href="/assets/js/66.6c059870.js"><link rel="prefetch" href="/assets/js/67.fd1a659a.js"><link rel="prefetch" href="/assets/js/68.c4fd4b36.js"><link rel="prefetch" href="/assets/js/69.d47f7ab3.js"><link rel="prefetch" href="/assets/js/7.20fdc500.js"><link rel="prefetch" href="/assets/js/71.9a33d11d.js"><link rel="prefetch" href="/assets/js/72.54fa94cb.js"><link rel="prefetch" href="/assets/js/73.7b532e33.js"><link rel="prefetch" href="/assets/js/74.85c3b68e.js"><link rel="prefetch" href="/assets/js/75.eed6a123.js"><link rel="prefetch" href="/assets/js/76.abd576fb.js"><link rel="prefetch" href="/assets/js/77.c860701b.js"><link rel="prefetch" href="/assets/js/78.3e37c795.js"><link rel="prefetch" href="/assets/js/79.a367f544.js"><link rel="prefetch" href="/assets/js/80.96ce1a04.js"><link rel="prefetch" href="/assets/js/81.e5fe00e5.js"><link rel="prefetch" href="/assets/js/82.f54029d3.js"><link rel="prefetch" href="/assets/js/83.050c4cd3.js"><link rel="prefetch" href="/assets/js/84.359b2fc3.js"><link rel="prefetch" href="/assets/js/85.ac711251.js"><link rel="prefetch" href="/assets/js/86.a299c2a1.js"><link rel="prefetch" href="/assets/js/87.b54ab847.js"><link rel="prefetch" href="/assets/js/88.190f7a17.js"><link rel="prefetch" href="/assets/js/89.c1ad7c69.js"><link rel="prefetch" href="/assets/js/90.0459cbfa.js"><link rel="prefetch" href="/assets/js/91.c5069a30.js"><link rel="prefetch" href="/assets/js/92.7f7a43ab.js"><link rel="prefetch" href="/assets/js/93.ba928c0a.js"><link rel="prefetch" href="/assets/js/94.54b8a7fb.js"><link rel="prefetch" href="/assets/js/95.f79c75c3.js"><link rel="prefetch" href="/assets/js/96.5cee52a2.js"><link rel="prefetch" href="/assets/js/97.bdcc701a.js"><link rel="prefetch" href="/assets/js/98.7b88176b.js"><link rel="prefetch" href="/assets/js/99.4c22f92f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.02634ae8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e9c6398.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">灯塔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link router-link-active">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link router-link-active">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS发展历程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ES5语法详解</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JS/ES5/es5.0.html" class="sidebar-link">一、 基本概念</a></li><li><a href="/JS/ES5/es5.1.html" aria-current="page" class="active sidebar-link">二、 变量、作用域和内存问题.</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/JS/ES5/es5.1.html#_1-基本类型和引用类型的值" class="sidebar-link">1 基本类型和引用类型的值</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.1.html#_2-执行环境及作用域" class="sidebar-link">2 执行环境及作用域</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.1.html#_3-垃圾收集" class="sidebar-link">3 垃圾收集</a></li></ul></li><li><a href="/JS/ES5/es5.2.html" class="sidebar-link">三、 引用类型</a></li><li><a href="/JS/ES5/es5.3.html" class="sidebar-link">四、 面向对象的程序设计</a></li><li><a href="/JS/ES5/es5.4.html" class="sidebar-link">五、 异步操作</a></li><li><a href="/JS/ES5/es5.5.html" class="sidebar-link">六、 DOM</a></li><li><a href="/JS/ES5/es5.6.html" class="sidebar-link">七、 事件</a></li><li><a href="/JS/ES5/es5.7.html" class="sidebar-link">八、 浏览器模型</a></li><li><a href="/JS/ES5/es5.8.html" class="sidebar-link">九、 网页元素接口拓展</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6新增特性</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="二、-变量、作用域和内存问题"><a href="#二、-变量、作用域和内存问题" class="header-anchor">#</a> 二、 变量、作用域和内存问题.</h1> <h2 id="_1-基本类型和引用类型的值"><a href="#_1-基本类型和引用类型的值" class="header-anchor">#</a> 1 基本类型和引用类型的值</h2> <p>ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。基本类型值指的是
+简单的数据段，而引用类型值指那些可能由多个值构成的对象。
+在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。第3 章讨论了5 种
+基本数据类型：Undefined、Null、Boolean、Number 和String。这5 种基本数据类型是按值访问
+的，因为可以操作保存在变量中的实际的值。
+引用类型的值是保存在内存中的对象。与其他语言不同，JavaScript 不允许直接访问内存中的位置，
+也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。
+为此，引用类型的值是按引用访问的。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>在很多语言中，字符串以对象的形式来表示，因此被认为是引用类型的。
+ECMAScript 放弃了这一传统。</p></div> <h2 id="_2-执行环境及作用域"><a href="#_2-执行环境及作用域" class="header-anchor">#</a> 2 执行环境及作用域</h2> <p>执行环境（execution context，为简单起见，有时也称为“环境”）是JavaScript 中最为重要的一个概
+念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个
+与之关联的变量对象（variable object），环境中定义的所有变量和函数都保存在这个对象中。虽然我们
+编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
+全局执行环境是最外围的一个执行环境。根据ECMAScript 实现所在的宿主环境不同，表示执行环
+境的对象也不一样。在Web 浏览器中，全局执行环境被认为是window 对象（第7 章将详细讨论），因
+此所有全局变量和函数都是作为window 对象的属性和方法创建的。某个执行环境中的所有代码执行完
+毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退
+出——例如关闭网页或浏览器——时才会被销毁）。
+每个函数都有自己的执行环境。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。
+而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。ECMAScript 程序中的执行流
+正是由这个方便的机制控制着。
+当代码在一个环境中执行时，会创建变量对象的一个作用域链（scope chain）。作用域链的用途，是
+保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所
+在环境的变量对象。如果这个环境是函数，则将其活动对象（activation object）作为变量对象。活动对
+象在最开始时只包含一个变量，即arguments 对象（这个对象在全局环境中是不存在的）。作用域链中
+的下一个变量对象来自包含（外部）环境，而再下一个变量对象则来自下一个包含环境。这样，一直延
+续到全局执行环境；全局执行环境的变量对象始终都是作用域链中的最后一个对象。
+标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程始终从作用域链的前端开始，
+然后逐级地向后回溯，直至找到标识符为止（如果找不到标识符，通常会导致错误发生）。
+请看下面的示例代码：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> color <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>color <span class="token operator">===</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        color <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        color <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Color is now &quot;</span> <span class="token operator">+</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这个简单的例子中，函数changeColor()的作用域链包含两个对象：它自己的变量对象（其中
+定义着arguments 对象）和全局环境的变量对象。可以在函数内部访问变量color，就是因为可以在
+这个作用域链中找到它。</p> <p>此外，在局部作用域中定义的变量可以在局部环境中与全局变量互换使用，如下面这个例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> color <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> anotherColor <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">swapColors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> tempColor <span class="token operator">=</span> anotherColor<span class="token punctuation">;</span>
+        anotherColor <span class="token operator">=</span> color<span class="token punctuation">;</span>
+        color <span class="token operator">=</span> tempColor<span class="token punctuation">;</span>
+        <span class="token comment">// 这里可以访问color、anotherColor 和tempColor</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 这里可以访问color 和anotherColor，但不能访问tempColor</span>
+    <span class="token function">swapColors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 这里只能访问color</span>
+<span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>以上代码共涉及3 个执行环境：全局环境、changeColor()的局部环境和swapColors()的局部
+环境。全局环境中有一个变量color 和一个函数changeColor()。changeColor()的局部环境中有
+一个名为anotherColor 的变量和一个名为swapColors()的函数，但它也可以访问全局环境中的变
+量color。swapColors()的局部环境中有一个变量tempColor，该变量只能在这个环境中访问到。
+无论全局环境还是changeColor()的局部环境都无权访问tempColor。然而，在swapColors()内部
+则可以访问其他两个环境中的所有变量，因为那两个环境是它的父执行环境。</p> <h2 id="_3-垃圾收集"><a href="#_3-垃圾收集" class="header-anchor">#</a> 3 垃圾收集</h2> <p>JavaScript 具有自动垃圾收集机制，也就是说，执行环境会负责管理代码执行过程中使用的内存。
+而在C 和C++之类的语言中，开发人员的一项基本任务就是手工跟踪内存的使用情况，这是造成许多问
+题的一个根源。在编写JavaScript 程序时，开发人员不用再关心内存使用问题，所需内存的分配以及无
+用内存的回收完全实现了自动管理。这种垃圾收集机制的原理其实很简单：找出那些不再继续使用的变
+量，然后释放其占用的内存。为此，垃圾收集器会按照固定的时间间隔（或代码执行中预定的收集时间），
+周期性地执行这一操作。
+下面我们来分析一下函数中局部变量的正常生命周期。局部变量只在函数执行的过程中存在。而在
+这个过程中，会为局部变量在栈（或堆）内存上分配相应的空间，以便存储它们的值。然后在函数中使
+用这些变量，直至函数执行结束。此时，局部变量就没有存在的必要了，因此可以释放它们的内存以供
+将来使用。在这种情况下，很容易判断变量是否还有存在的必要；但并非所有情况下都这么容易就能得
+出结论。垃圾收集器必须跟踪哪个变量有用哪个变量没用，对于不再有用的变量打上标记，以备将来收
+回其占用的内存。用于标识无用变量的策略可能会因实现而异，但具体到浏览器中的实现，则通常有两
+个策略。</p> <ul><li>3.1 标记清除</li></ul> <p>JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。当变量进入环境（例如，在函
+数中声明一个变量）时，就将这个变量标记为“进入环境”。从逻辑上讲，永远不能释放进入环境的变量所
+占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。而当变量离开环境时，则将其标记为
+“离开环境”。
+垃圾收集器在运行的时候会给存储在内存中的所有变量都加上标记（当然，可以使用任何标记方
+式）。然后，它会去掉环境中的变量以及被环境中的变量引用的变量的标记。而在此之后再被加上标记
+的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。最后，垃圾收集器
+完成内存清除工作，销毁那些带标记的值并回收它们所占用的内存空间。</p> <ul><li>3.2 引用计数</li></ul> <p>引用计数的含义是跟踪记录每
+个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是1。
+如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量又取
+得了另外一个值，则这个值的引用次数减1。当这个值的引用次数变成0 时，则说明没有办法再访问这
+个值了，因而就可以将其占用的内存空间回收回来。这样，当垃圾收集器下次再运行时，它就会释放那
+些引用次数为零的值所占用的内存。</p> <ul><li>3.4 管理内存</li></ul> <p>优化内存占用的最佳方式，就是为执行
+中的代码只保存必要的数据。一旦数据不再有用，最好通过将其值设置为null 来释放其引用——这个
+做法叫做解除引用（dereferencing）</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/1degrees/edit/master/docs/JS/ES5/es5.1.md" target="_blank" rel="noopener noreferrer">GitHub主页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JS/ES5/es5.0.html" class="prev">
+        一、 基本概念
+      </a></span> <span class="next"><a href="/JS/ES5/es5.2.html">
+        三、 引用类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3fb25db5.js" defer></script><script src="/assets/js/2.59014ece.js" defer></script><script src="/assets/js/1.1ee2bd06.js" defer></script><script src="/assets/js/70.fd34ac83.js" defer></script>
+  </body>
+</html>

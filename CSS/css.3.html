@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS选择器：伪类 | 灯塔</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="前端技术学习交流分享">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e9c6398.css" as="style"><link rel="preload" href="/assets/js/app.3fb25db5.js" as="script"><link rel="preload" href="/assets/js/2.59014ece.js" as="script"><link rel="preload" href="/assets/js/1.1ee2bd06.js" as="script"><link rel="preload" href="/assets/js/46.11f7ce67.js" as="script"><link rel="prefetch" href="/assets/js/10.1deac060.js"><link rel="prefetch" href="/assets/js/100.71e6a0a8.js"><link rel="prefetch" href="/assets/js/101.6d133a64.js"><link rel="prefetch" href="/assets/js/102.45a9facf.js"><link rel="prefetch" href="/assets/js/103.f4c6968c.js"><link rel="prefetch" href="/assets/js/104.bb576e80.js"><link rel="prefetch" href="/assets/js/105.557c9629.js"><link rel="prefetch" href="/assets/js/106.b414582a.js"><link rel="prefetch" href="/assets/js/107.18a13540.js"><link rel="prefetch" href="/assets/js/11.ab35c24e.js"><link rel="prefetch" href="/assets/js/12.cc133464.js"><link rel="prefetch" href="/assets/js/13.2f71f789.js"><link rel="prefetch" href="/assets/js/14.03825d58.js"><link rel="prefetch" href="/assets/js/15.ea37f0ce.js"><link rel="prefetch" href="/assets/js/16.14e11910.js"><link rel="prefetch" href="/assets/js/17.d82649f9.js"><link rel="prefetch" href="/assets/js/18.23f702ad.js"><link rel="prefetch" href="/assets/js/19.ef644c8b.js"><link rel="prefetch" href="/assets/js/20.6846ea6c.js"><link rel="prefetch" href="/assets/js/21.af3c54b5.js"><link rel="prefetch" href="/assets/js/22.350028a7.js"><link rel="prefetch" href="/assets/js/23.6fbf7b26.js"><link rel="prefetch" href="/assets/js/24.fe418ed4.js"><link rel="prefetch" href="/assets/js/25.e0c7890d.js"><link rel="prefetch" href="/assets/js/26.2a70f863.js"><link rel="prefetch" href="/assets/js/27.ddc798d7.js"><link rel="prefetch" href="/assets/js/28.d1667085.js"><link rel="prefetch" href="/assets/js/29.b1b60a98.js"><link rel="prefetch" href="/assets/js/3.a1be5b13.js"><link rel="prefetch" href="/assets/js/30.f040d392.js"><link rel="prefetch" href="/assets/js/31.faedaea8.js"><link rel="prefetch" href="/assets/js/32.9a8b4cee.js"><link rel="prefetch" href="/assets/js/33.bdf8f280.js"><link rel="prefetch" href="/assets/js/34.99ad57bc.js"><link rel="prefetch" href="/assets/js/35.21426b80.js"><link rel="prefetch" href="/assets/js/36.56960109.js"><link rel="prefetch" href="/assets/js/37.f31dd627.js"><link rel="prefetch" href="/assets/js/38.4cb67a19.js"><link rel="prefetch" href="/assets/js/39.fb67e8dc.js"><link rel="prefetch" href="/assets/js/4.1015aec1.js"><link rel="prefetch" href="/assets/js/40.ea27eb52.js"><link rel="prefetch" href="/assets/js/41.09beb0d7.js"><link rel="prefetch" href="/assets/js/42.b60ee9b1.js"><link rel="prefetch" href="/assets/js/43.c8d7975c.js"><link rel="prefetch" href="/assets/js/44.da554ec7.js"><link rel="prefetch" href="/assets/js/45.baa5cf19.js"><link rel="prefetch" href="/assets/js/47.cfef4d41.js"><link rel="prefetch" href="/assets/js/48.7b140205.js"><link rel="prefetch" href="/assets/js/49.55cb3316.js"><link rel="prefetch" href="/assets/js/5.e20f6a0c.js"><link rel="prefetch" href="/assets/js/50.ff41f546.js"><link rel="prefetch" href="/assets/js/51.951f6c76.js"><link rel="prefetch" href="/assets/js/52.cb686cbd.js"><link rel="prefetch" href="/assets/js/53.fdc0d4ff.js"><link rel="prefetch" href="/assets/js/54.4dcbfbe8.js"><link rel="prefetch" href="/assets/js/55.71243bbf.js"><link rel="prefetch" href="/assets/js/56.f6275a4e.js"><link rel="prefetch" href="/assets/js/57.f2a3c077.js"><link rel="prefetch" href="/assets/js/58.397ba8c6.js"><link rel="prefetch" href="/assets/js/59.1e6ece35.js"><link rel="prefetch" href="/assets/js/6.37a52b4b.js"><link rel="prefetch" href="/assets/js/60.eca7eba7.js"><link rel="prefetch" href="/assets/js/61.0bc7e376.js"><link rel="prefetch" href="/assets/js/62.3c4a2273.js"><link rel="prefetch" href="/assets/js/63.db441081.js"><link rel="prefetch" href="/assets/js/64.495493fb.js"><link rel="prefetch" href="/assets/js/65.ed0d4ded.js"><link rel="prefetch" href="/assets/js/66.6c059870.js"><link rel="prefetch" href="/assets/js/67.fd1a659a.js"><link rel="prefetch" href="/assets/js/68.c4fd4b36.js"><link rel="prefetch" href="/assets/js/69.d47f7ab3.js"><link rel="prefetch" href="/assets/js/7.20fdc500.js"><link rel="prefetch" href="/assets/js/70.fd34ac83.js"><link rel="prefetch" href="/assets/js/71.9a33d11d.js"><link rel="prefetch" href="/assets/js/72.54fa94cb.js"><link rel="prefetch" href="/assets/js/73.7b532e33.js"><link rel="prefetch" href="/assets/js/74.85c3b68e.js"><link rel="prefetch" href="/assets/js/75.eed6a123.js"><link rel="prefetch" href="/assets/js/76.abd576fb.js"><link rel="prefetch" href="/assets/js/77.c860701b.js"><link rel="prefetch" href="/assets/js/78.3e37c795.js"><link rel="prefetch" href="/assets/js/79.a367f544.js"><link rel="prefetch" href="/assets/js/80.96ce1a04.js"><link rel="prefetch" href="/assets/js/81.e5fe00e5.js"><link rel="prefetch" href="/assets/js/82.f54029d3.js"><link rel="prefetch" href="/assets/js/83.050c4cd3.js"><link rel="prefetch" href="/assets/js/84.359b2fc3.js"><link rel="prefetch" href="/assets/js/85.ac711251.js"><link rel="prefetch" href="/assets/js/86.a299c2a1.js"><link rel="prefetch" href="/assets/js/87.b54ab847.js"><link rel="prefetch" href="/assets/js/88.190f7a17.js"><link rel="prefetch" href="/assets/js/89.c1ad7c69.js"><link rel="prefetch" href="/assets/js/90.0459cbfa.js"><link rel="prefetch" href="/assets/js/91.c5069a30.js"><link rel="prefetch" href="/assets/js/92.7f7a43ab.js"><link rel="prefetch" href="/assets/js/93.ba928c0a.js"><link rel="prefetch" href="/assets/js/94.54b8a7fb.js"><link rel="prefetch" href="/assets/js/95.f79c75c3.js"><link rel="prefetch" href="/assets/js/96.5cee52a2.js"><link rel="prefetch" href="/assets/js/97.bdcc701a.js"><link rel="prefetch" href="/assets/js/98.7b88176b.js"><link rel="prefetch" href="/assets/js/99.4c22f92f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.02634ae8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e9c6398.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">灯塔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link router-link-active">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link router-link-active">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>玩转CSS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/CSS/" aria-current="page" class="sidebar-link">CSS基础</a></li><li><a href="/CSS/css.0.html" class="sidebar-link">CSS属性(上篇)</a></li><li><a href="/CSS/css.1.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.2.html" class="sidebar-link">CSS样式表和选择器</a></li><li><a href="/CSS/css.3.html" aria-current="page" class="active sidebar-link">CSS选择器：伪类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CSS/css.3.html#伪类-伪类选择器" class="sidebar-link">伪类（伪类选择器）</a></li><li class="sidebar-sub-header"><a href="/CSS/css.3.html#超链接a标签" class="sidebar-link">超链接a标签</a></li><li class="sidebar-sub-header"><a href="/CSS/css.3.html#动态伪类举例" class="sidebar-link">动态伪类举例</a></li></ul></li><li><a href="/CSS/css.4.html" class="sidebar-link">CSS样式表的继承性和层叠性</a></li><li><a href="/CSS/css.5.html" class="sidebar-link">CSS盒模型详解</a></li><li><a href="/CSS/css.6.html" class="sidebar-link">浮动</a></li><li><a href="/CSS/css.7.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.8.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.9.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.10.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.11.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.12.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.13.html" class="sidebar-link">CSS属性(下篇)</a></li><li><a href="/CSS/css.14.html" class="sidebar-link">CSS属性(下篇)</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css选择器-伪类"><a href="#css选择器-伪类" class="header-anchor">#</a> CSS选择器：伪类</h1> <h2 id="伪类-伪类选择器"><a href="#伪类-伪类选择器" class="header-anchor">#</a> 伪类（伪类选择器）</h2> <p><strong>伪类</strong>：同一个标签，根据其<strong>不同的种状态，有不同的样式</strong>。这就叫做“伪类”。伪类用冒号来表示。</p> <p>比如div是属于box类，这一点很明确，就是属于box类。但是a属于什么类？不明确。因为需要看用户点击前是什么状态，点击后是什么状态。所以，就叫做“伪类”。</p> <h3 id="静态伪类选择器、动态伪类选择器"><a href="#静态伪类选择器、动态伪类选择器" class="header-anchor">#</a> 静态伪类选择器、动态伪类选择器</h3> <p>伪类选择器分为两种。</p> <p>（1）<strong>静态伪类</strong>：只能用于<strong>超链接</strong>的样式。如下：</p> <ul><li><code>:link</code> 超链接点击之前</li> <li><code>:visited</code> 链接被访问过之后</li></ul> <p>PS：以上两种样式，只能用于超链接。</p> <p>（2）<strong>动态伪类</strong>：针对<strong>所有标签</strong>都适用的样式。如下：</p> <ul><li><code>:hover</code> “悬停”：鼠标放到标签上的时候</li> <li><code>:active</code> “激活”： 鼠标点击标签，但是不松手时。</li> <li><code>:focus</code> 是某个标签获得焦点时的样式（比如某个输入框获得焦点）</li></ul> <h2 id="超链接a标签"><a href="#超链接a标签" class="header-anchor">#</a> 超链接a标签</h2> <h3 id="超链接的四种状态"><a href="#超链接的四种状态" class="header-anchor">#</a> 超链接的四种状态</h3> <p>a标签有4种伪类（即对应四种状态），要求背诵。如下：</p> <ul><li><code>:link</code>   “链接”：超链接点击之前</li> <li><code>:visited</code> “访问过的”：链接被访问过之后</li> <li><code>:hover</code> “悬停”：鼠标放到标签上的时候</li> <li><code>:active</code> “激活”： 鼠标点击标签，但是不松手时。</li></ul> <p>对应的代码如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+ <span class="token comment">/*让超链接点击之前是红色*/</span>
+ <span class="token selector">a:link</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">/*让超链接点击之后是绿色*/</span>
+ <span class="token selector">a:visited</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">/*鼠标悬停，放到标签上的时候*/</span>
+ <span class="token selector">a:hover</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>green<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">/*鼠标点击链接，但是不松手的时候*/</span>
+ <span class="token selector">a:active</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>black<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>记住，在css中，这四种状态<strong>必须按照固定的顺序写</strong>：</p> <blockquote><p>a:link 、a:visited 、a:hover 、a:active</p></blockquote> <p>如果不按照顺序，那么将失效。“爱恨准则”：love hate。必须先爱，后恨。</p> <p>看一下这四种状态的动图效果：</p> <p><img src="http://img.smyhvae.com/20180113_2239.gif" alt=""></p> <h3 id="超链接的美化"><a href="#超链接的美化" class="header-anchor">#</a> 超链接的美化</h3> <p>问：既然<code>a{}</code>定义了超链的属性，和<code>a:link{}</code>定义了超链点击之前的属性，那这两个有啥区别呢？</p> <p>答：</p> <p><strong><code>a{}</code>和<code>a:link{}</code>的区别：</strong></p> <ul><li><code>a{}</code>定义的样式针对所有的超链接(包括锚点)</li> <li><code>a:link{}</code>定义的样式针对所有写了href属性的超链接(不包括锚点)</li></ul> <p>超链接a标签在使用的时候，比较难。因为不仅仅要控制a这个盒子，也要控制它的伪类。</p> <p>我们一定要将a标签写在前面，将<code>:link、:visited、:hover、:active</code>这些伪类写在后面。</p> <p>针对超链接，我们来举个例子：</p> <p><img src="http://img.smyhvae.com/20170810_2235.gif" alt=""></p> <p>为了实现上面这个效果，完整版代码如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span> <span class="token name">PUBLIC</span> <span class="token string">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span> <span class="token string">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/1999/xhtml<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">xml:</span>lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html;charset=UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">*</span><span class="token punctuation">{</span>
+   <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+   <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav</span><span class="token punctuation">{</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 960px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+   <span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span>
+   <span class="token property">margin</span><span class="token punctuation">:</span> 100px auto<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul</span><span class="token punctuation">{</span>
+   <span class="token comment">/*去掉小圆点*/</span>
+   <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul li</span><span class="token punctuation">{</span>
+   <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+   <span class="token comment">/*让内容水平居中*/</span>
+   <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+   <span class="token comment">/*让行高等于nav的高度，就可以保证内容垂直居中*/</span>
+   <span class="token property">line-height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul li a</span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">/*两个伪类的属性，可以用逗号隔开*/</span>
+  <span class="token selector">.nav ul li a:link , .nav ul li a:visited</span><span class="token punctuation">{</span>
+   <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+   <span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul li a:hover</span><span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+ </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>nav<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>网站栏目<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>上方代码中，我们发现，当我们在定义<code>a:link</code>和 <code>a:visited</code>这两个伪类的时候，如果它们的属性相同，我们其实可以写在一起，用逗号隔开就好，摘抄如下：</p> <div class="language-css extra-class"><pre class="language-css"><code>  <span class="token selector">.nav ul li a</span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">/*两个伪类的属性，可以用逗号隔开*/</span>
+  <span class="token selector">.nav ul li a:link , .nav ul li a:visited</span><span class="token punctuation">{</span>
+   <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+   <span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul li a:hover</span><span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>如上方代码所示，最标准的写法，就是把link、visited、hover这三个伪类都要写。但是前端开发工程师在大量的实践中，发现不写link、visited也挺兼容。写法是：</p> <blockquote><p>a:link、a:visited都是可以省略的，简写在a标签里面。也就是说，a标签涵盖了link、visited的状态（前提是都具有了相同的属性）。写法如下：</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code>  <span class="token selector">.nav ul li a</span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+   <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+   <span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.nav ul li a:hover</span><span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><p>当然了，在写<code>a:link</code>、<code>a:visited</code>这两个伪类的时候，要么同时写，要么同时不写。如果只写<code>a</code>属性和<code>a:link</code>属性，不规范。</p> <h2 id="动态伪类举例"><a href="#动态伪类举例" class="header-anchor">#</a> 动态伪类举例</h2> <p>我们在第一段中描述过，下面这三种动态伪类，针对所有标签都适用。</p> <ul><li><code>:hover</code> “悬停”：鼠标放到标签上的时候</li> <li><code>:active</code> “激活”： 鼠标点击标签，但是不松手时。</li> <li><code>:focus</code> 是某个标签获得焦点时的样式（比如某个输入框获得焦点）</li></ul> <p>我们不妨来举下例子。</p> <p>举例1：</p> <div class="language-html extra-class"><pre class="language-html"><code>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token comment">/*
+ 伪类选择器：动态伪类
+  */</span>
+
+   <span class="token comment">/*
+ 让文本框获取焦点时：
+ 边框：#FF6F3D这种橙色
+ 文字：绿色
+ 背景色：#6a6a6a这种灰色
+   */</span>
+ <span class="token selector">input:focus</span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span>3px solid #FF6F3D<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>#6a6a6a<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">/*
+ 鼠标放在标签上时显示蓝色
+    */</span>
+ <span class="token selector">label:hover</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">/*
+ 点击标签鼠标没有松开时显示红色
+    */</span>
+ <span class="token selector">label:active</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>效果：</p> <p><img src="http://img.smyhvae.com/2015-10-03-css-02.gif" alt=""></p> <p>利用这个<code>hover</code>属性，我们同样对表格做一个样式的设置：
+表格举例：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Generator<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>EditPlus®<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Author<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Keywords<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Description<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+
+ <span class="token comment">/*整个表格的样式*/</span>
+   <span class="token selector">table</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid blue<span class="token punctuation">;</span>
+  <span class="token comment">/*border-collapse属性：对表格的线进行折叠*/</span>
+  <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+ <span class="token comment">/*鼠标悬停时，让当前行显示#868686这种灰色*/</span>
+   <span class="token selector">table tr:hover</span><span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #868686<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+ <span class="token comment">/*每个单元格的样式*/</span>
+   <span class="token selector">table td</span><span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span>1px solid red<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>效果：</p> <p><img src="http://img.smyhvae.com/2015-10-03-css-04.gif" alt=""></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/1degrees/edit/master/docs/CSS/css.3.md" target="_blank" rel="noopener noreferrer">GitHub主页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CSS/css.2.html" class="prev">
+        CSS样式表和选择器
+      </a></span> <span class="next"><a href="/CSS/css.4.html">
+        CSS样式表的继承性和层叠性
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3fb25db5.js" defer></script><script src="/assets/js/2.59014ece.js" defer></script><script src="/assets/js/1.1ee2bd06.js" defer></script><script src="/assets/js/46.11f7ce67.js" defer></script>
+  </body>
+</html>

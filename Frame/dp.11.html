@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>策略模式 | 灯塔</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="前端技术学习交流分享">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e9c6398.css" as="style"><link rel="preload" href="/assets/js/app.3fb25db5.js" as="script"><link rel="preload" href="/assets/js/2.59014ece.js" as="script"><link rel="preload" href="/assets/js/1.1ee2bd06.js" as="script"><link rel="preload" href="/assets/js/57.f2a3c077.js" as="script"><link rel="prefetch" href="/assets/js/10.1deac060.js"><link rel="prefetch" href="/assets/js/100.71e6a0a8.js"><link rel="prefetch" href="/assets/js/101.6d133a64.js"><link rel="prefetch" href="/assets/js/102.45a9facf.js"><link rel="prefetch" href="/assets/js/103.f4c6968c.js"><link rel="prefetch" href="/assets/js/104.bb576e80.js"><link rel="prefetch" href="/assets/js/105.557c9629.js"><link rel="prefetch" href="/assets/js/106.b414582a.js"><link rel="prefetch" href="/assets/js/107.18a13540.js"><link rel="prefetch" href="/assets/js/11.ab35c24e.js"><link rel="prefetch" href="/assets/js/12.cc133464.js"><link rel="prefetch" href="/assets/js/13.2f71f789.js"><link rel="prefetch" href="/assets/js/14.03825d58.js"><link rel="prefetch" href="/assets/js/15.ea37f0ce.js"><link rel="prefetch" href="/assets/js/16.14e11910.js"><link rel="prefetch" href="/assets/js/17.d82649f9.js"><link rel="prefetch" href="/assets/js/18.23f702ad.js"><link rel="prefetch" href="/assets/js/19.ef644c8b.js"><link rel="prefetch" href="/assets/js/20.6846ea6c.js"><link rel="prefetch" href="/assets/js/21.af3c54b5.js"><link rel="prefetch" href="/assets/js/22.350028a7.js"><link rel="prefetch" href="/assets/js/23.6fbf7b26.js"><link rel="prefetch" href="/assets/js/24.fe418ed4.js"><link rel="prefetch" href="/assets/js/25.e0c7890d.js"><link rel="prefetch" href="/assets/js/26.2a70f863.js"><link rel="prefetch" href="/assets/js/27.ddc798d7.js"><link rel="prefetch" href="/assets/js/28.d1667085.js"><link rel="prefetch" href="/assets/js/29.b1b60a98.js"><link rel="prefetch" href="/assets/js/3.a1be5b13.js"><link rel="prefetch" href="/assets/js/30.f040d392.js"><link rel="prefetch" href="/assets/js/31.faedaea8.js"><link rel="prefetch" href="/assets/js/32.9a8b4cee.js"><link rel="prefetch" href="/assets/js/33.bdf8f280.js"><link rel="prefetch" href="/assets/js/34.99ad57bc.js"><link rel="prefetch" href="/assets/js/35.21426b80.js"><link rel="prefetch" href="/assets/js/36.56960109.js"><link rel="prefetch" href="/assets/js/37.f31dd627.js"><link rel="prefetch" href="/assets/js/38.4cb67a19.js"><link rel="prefetch" href="/assets/js/39.fb67e8dc.js"><link rel="prefetch" href="/assets/js/4.1015aec1.js"><link rel="prefetch" href="/assets/js/40.ea27eb52.js"><link rel="prefetch" href="/assets/js/41.09beb0d7.js"><link rel="prefetch" href="/assets/js/42.b60ee9b1.js"><link rel="prefetch" href="/assets/js/43.c8d7975c.js"><link rel="prefetch" href="/assets/js/44.da554ec7.js"><link rel="prefetch" href="/assets/js/45.baa5cf19.js"><link rel="prefetch" href="/assets/js/46.11f7ce67.js"><link rel="prefetch" href="/assets/js/47.cfef4d41.js"><link rel="prefetch" href="/assets/js/48.7b140205.js"><link rel="prefetch" href="/assets/js/49.55cb3316.js"><link rel="prefetch" href="/assets/js/5.e20f6a0c.js"><link rel="prefetch" href="/assets/js/50.ff41f546.js"><link rel="prefetch" href="/assets/js/51.951f6c76.js"><link rel="prefetch" href="/assets/js/52.cb686cbd.js"><link rel="prefetch" href="/assets/js/53.fdc0d4ff.js"><link rel="prefetch" href="/assets/js/54.4dcbfbe8.js"><link rel="prefetch" href="/assets/js/55.71243bbf.js"><link rel="prefetch" href="/assets/js/56.f6275a4e.js"><link rel="prefetch" href="/assets/js/58.397ba8c6.js"><link rel="prefetch" href="/assets/js/59.1e6ece35.js"><link rel="prefetch" href="/assets/js/6.37a52b4b.js"><link rel="prefetch" href="/assets/js/60.eca7eba7.js"><link rel="prefetch" href="/assets/js/61.0bc7e376.js"><link rel="prefetch" href="/assets/js/62.3c4a2273.js"><link rel="prefetch" href="/assets/js/63.db441081.js"><link rel="prefetch" href="/assets/js/64.495493fb.js"><link rel="prefetch" href="/assets/js/65.ed0d4ded.js"><link rel="prefetch" href="/assets/js/66.6c059870.js"><link rel="prefetch" href="/assets/js/67.fd1a659a.js"><link rel="prefetch" href="/assets/js/68.c4fd4b36.js"><link rel="prefetch" href="/assets/js/69.d47f7ab3.js"><link rel="prefetch" href="/assets/js/7.20fdc500.js"><link rel="prefetch" href="/assets/js/70.fd34ac83.js"><link rel="prefetch" href="/assets/js/71.9a33d11d.js"><link rel="prefetch" href="/assets/js/72.54fa94cb.js"><link rel="prefetch" href="/assets/js/73.7b532e33.js"><link rel="prefetch" href="/assets/js/74.85c3b68e.js"><link rel="prefetch" href="/assets/js/75.eed6a123.js"><link rel="prefetch" href="/assets/js/76.abd576fb.js"><link rel="prefetch" href="/assets/js/77.c860701b.js"><link rel="prefetch" href="/assets/js/78.3e37c795.js"><link rel="prefetch" href="/assets/js/79.a367f544.js"><link rel="prefetch" href="/assets/js/80.96ce1a04.js"><link rel="prefetch" href="/assets/js/81.e5fe00e5.js"><link rel="prefetch" href="/assets/js/82.f54029d3.js"><link rel="prefetch" href="/assets/js/83.050c4cd3.js"><link rel="prefetch" href="/assets/js/84.359b2fc3.js"><link rel="prefetch" href="/assets/js/85.ac711251.js"><link rel="prefetch" href="/assets/js/86.a299c2a1.js"><link rel="prefetch" href="/assets/js/87.b54ab847.js"><link rel="prefetch" href="/assets/js/88.190f7a17.js"><link rel="prefetch" href="/assets/js/89.c1ad7c69.js"><link rel="prefetch" href="/assets/js/90.0459cbfa.js"><link rel="prefetch" href="/assets/js/91.c5069a30.js"><link rel="prefetch" href="/assets/js/92.7f7a43ab.js"><link rel="prefetch" href="/assets/js/93.ba928c0a.js"><link rel="prefetch" href="/assets/js/94.54b8a7fb.js"><link rel="prefetch" href="/assets/js/95.f79c75c3.js"><link rel="prefetch" href="/assets/js/96.5cee52a2.js"><link rel="prefetch" href="/assets/js/97.bdcc701a.js"><link rel="prefetch" href="/assets/js/98.7b88176b.js"><link rel="prefetch" href="/assets/js/99.4c22f92f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.02634ae8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e9c6398.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">灯塔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Frame/" class="nav-link router-link-active">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Frame/" class="nav-link router-link-active">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>常用设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Frame/" aria-current="page" class="sidebar-link">设计模式概要简介</a></li><li><a href="/Frame/dp.0.html" class="sidebar-link">面向对象设计特征</a></li><li><a href="/Frame/dp.1.html" class="sidebar-link">Javascript中的this</a></li><li><a href="/Frame/dp.2.html" class="sidebar-link">函数高级应用</a></li><li><a href="/Frame/dp.3.html" class="sidebar-link">工厂模式</a></li><li><a href="/Frame/dp.4.html" class="sidebar-link">单例模式</a></li><li><a href="/Frame/dp.5.html" class="sidebar-link">发布—订阅模式(观察者模式)</a></li><li><a href="/Frame/dp.6.html" class="sidebar-link">代理模式</a></li><li><a href="/Frame/dp.7.html" class="sidebar-link">迭代器模式</a></li><li><a href="/Frame/dp.8.html" class="sidebar-link">职责链模式</a></li><li><a href="/Frame/dp.9.html" class="sidebar-link">中介者模式</a></li><li><a href="/Frame/dp.10.html" class="sidebar-link">命令模式</a></li><li><a href="/Frame/dp.11.html" aria-current="page" class="active sidebar-link">策略模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Frame/dp.11.html#_1-策略模式案例" class="sidebar-link">1.策略模式案例</a></li><li class="sidebar-sub-header"><a href="/Frame/dp.11.html#_2-小结" class="sidebar-link">2.小结</a></li></ul></li><li><a href="/Frame/dp.12.html" class="sidebar-link">适配器模式</a></li><li><a href="/Frame/dp.13.html" class="sidebar-link">组合模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE源码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React源码</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="策略模式"><a href="#策略模式" class="header-anchor">#</a> 策略模式</h1> <p>概念：策略模式属于对象的行为模式. 策略模式能在运行时改变软件的算法行为.如何实现策略模式根据情况而定,但其主要思想是定义一个通用的问题,使用不同的算法来实现,然后将这些算法都封装在一个统一接口的背后.</p> <p>简单的理解：定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换。</p> <h2 id="_1-策略模式案例"><a href="#_1-策略模式案例" class="header-anchor">#</a> 1.策略模式案例</h2> <h3 id="_1-1-策略模式案例简易策略模式-实现根据绩效评级-分配对应不同工资标准"><a href="#_1-1-策略模式案例简易策略模式-实现根据绩效评级-分配对应不同工资标准" class="header-anchor">#</a> 1.1 策略模式案例简易策略模式（实现根据绩效评级，分配对应不同工资标准）</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//简单和直接的做法,给定一组strategy,对应不同策略算法</span>
+<span class="token keyword">var</span> strategies <span class="token operator">=</span> <span class="token punctuation">{</span> 
+    <span class="token function-variable function">S</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">salary</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token function-variable function">A</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">salary</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token function-variable function">B</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">salary</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> <span class="token punctuation">,</span> 
+    <span class="token function-variable function">C</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">salary</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//定义calculateBonus函数充当Context, 来接受用户的请求</span>
+<span class="token keyword">var</span> <span class="token function-variable function">calculateBonus</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">level<span class="token punctuation">,</span> salary</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+ <span class="token keyword">return</span> strategies<span class="token punctuation">[</span> level <span class="token punctuation">]</span><span class="token punctuation">(</span> salary <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token function">calculateBonus</span><span class="token punctuation">(</span> <span class="token string">'S'</span><span class="token punctuation">,</span> <span class="token number">20000</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// 输出：80000</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token function">calculateBonus</span><span class="token punctuation">(</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token number">10000</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 输出：30000</span>
+</code></pre></div><h3 id="_1-3-面向对象版-策略模式"><a href="#_1-3-面向对象版-策略模式" class="header-anchor">#</a> 1.3 面向对象版-策略模式</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 奖金算法</span>
+<span class="token keyword">class</span> <span class="token class-name">performance</span> <span class="token punctuation">{</span>
+    <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'----抽象方法----'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">performanceS</span> <span class="token keyword">extends</span> <span class="token class-name">performance</span> <span class="token punctuation">{</span>
+    <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">performanceA</span> <span class="token keyword">extends</span> <span class="token class-name">performance</span> <span class="token punctuation">{</span>
+    <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">performanceB</span> <span class="token keyword">extends</span> <span class="token class-name">performance</span> <span class="token punctuation">{</span>
+    <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">performanceC</span> <span class="token keyword">extends</span> <span class="token class-name">performance</span> <span class="token punctuation">{</span>
+    <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> salary <span class="token operator">*</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 接下来定义奖金类 Bonus：</span>
+<span class="token keyword">class</span> <span class="token class-name">Bonus</span> <span class="token punctuation">{</span>
+    salary <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">// 原始工资</span>
+    strategy <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">// 绩效等级对应的策略算法对象</span>
+    <span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token parameter">salary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">=</span> salary<span class="token punctuation">;</span> <span class="token comment">// 设置员工的原始工资</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">setStrategy</span><span class="token punctuation">(</span><span class="token parameter">strategy</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>strategy <span class="token operator">=</span> strategy<span class="token punctuation">;</span> <span class="token comment">// 设置员工绩效等级对应的策略对象</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getBonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>strategy<span class="token punctuation">.</span><span class="token function">calculate</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 把计算奖金的操作委托给对应的策略对象</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> bonus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+bonus<span class="token punctuation">.</span><span class="token function">setSalary</span><span class="token punctuation">(</span> <span class="token number">10000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+bonus<span class="token punctuation">.</span><span class="token function">setStrategy</span><span class="token punctuation">(</span> <span class="token keyword">new</span> <span class="token class-name">performanceS</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置策略对象</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> bonus<span class="token punctuation">.</span><span class="token function">getBonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：40000 </span>
+bonus<span class="token punctuation">.</span><span class="token function">setStrategy</span><span class="token punctuation">(</span> <span class="token keyword">new</span> <span class="token class-name">performanceA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置策略对象</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> bonus<span class="token punctuation">.</span><span class="token function">getBonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：30000</span>
+
+</code></pre></div><h3 id="_1-3-策略模式-表单校验"><a href="#_1-3-策略模式-表单校验" class="header-anchor">#</a> 1.3 策略模式-表单校验</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/***********************验证策略**************************/</span>
+<span class="token keyword">const</span> strategies <span class="token operator">=</span> <span class="token punctuation">{</span> 
+    <span class="token function-variable function">isNonEmpty</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">value<span class="token punctuation">,</span> errorMsg</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> value <span class="token operator">===</span> <span class="token string">''</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            <span class="token keyword">return</span> errorMsg<span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token function-variable function">minLength</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">value<span class="token punctuation">,</span> length<span class="token punctuation">,</span> errorMsg</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> value<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> length <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            <span class="token keyword">return</span> errorMsg<span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token function-variable function">isMobile</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">value<span class="token punctuation">,</span> errorMsg</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(^1[3|5|8][0-9]{9}$)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span> value <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            <span class="token keyword">return</span> errorMsg<span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***********************Validator 类**************************/</span> 
+<span class="token keyword">class</span> <span class="token class-name">Validator</span> <span class="token punctuation">{</span>
+    cache <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">dom<span class="token punctuation">,</span> rules</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> rule<span class="token punctuation">;</span> rule <span class="token operator">=</span> rules<span class="token punctuation">[</span> i<span class="token operator">++</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            <span class="token keyword">let</span> strategyAry <span class="token operator">=</span> rule<span class="token punctuation">.</span>strategy<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span> <span class="token string">':'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+            <span class="token keyword">let</span> errorMsg <span class="token operator">=</span> rule<span class="token punctuation">.</span>errorMsg<span class="token punctuation">;</span> 
+            <span class="token keyword">this</span><span class="token punctuation">.</span>cache<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+                <span class="token keyword">let</span> strategy <span class="token operator">=</span> strategyAry<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                strategyAry<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span> dom<span class="token punctuation">.</span>value <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                strategyAry<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span> errorMsg <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                <span class="token keyword">return</span> strategies<span class="token punctuation">[</span> strategy <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span> dom<span class="token punctuation">,</span> strategyAry <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+    <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> validatorFunc<span class="token punctuation">;</span> validatorFunc <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cache<span class="token punctuation">[</span> i<span class="token operator">++</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            <span class="token keyword">let</span> errorMsg <span class="token operator">=</span> <span class="token function">validatorFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>errorMsg<span class="token punctuation">)</span><span class="token punctuation">{</span> 
+                <span class="token keyword">return</span> errorMsg<span class="token punctuation">;</span> 
+            <span class="token punctuation">}</span> 
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/***********************客户调用代码**************************/</span> 
+<span class="token keyword">var</span> registerForm <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span> <span class="token string">'registerForm'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">var</span> <span class="token function-variable function">validataFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">var</span> validator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Validator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    validator<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span> registerForm<span class="token punctuation">.</span>userName<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> 
+        <span class="token literal-property property">strategy</span><span class="token operator">:</span> <span class="token string">'isNonEmpty'</span><span class="token punctuation">,</span> 
+        <span class="token literal-property property">errorMsg</span><span class="token operator">:</span> <span class="token string">'用户名不能为空'</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> 
+        <span class="token literal-property property">strategy</span><span class="token operator">:</span> <span class="token string">'minLength:6'</span><span class="token punctuation">,</span> 
+        <span class="token literal-property property">errorMsg</span><span class="token operator">:</span> <span class="token string">'用户名长度不能小于 10 位'</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    validator<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span> registerForm<span class="token punctuation">.</span>password<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> 
+        <span class="token literal-property property">strategy</span><span class="token operator">:</span> <span class="token string">'minLength:6'</span><span class="token punctuation">,</span> 
+        <span class="token literal-property property">errorMsg</span><span class="token operator">:</span> <span class="token string">'密码长度不能小于 6 位'</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    validator<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span> registerForm<span class="token punctuation">.</span>phoneNumber<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> 
+        <span class="token literal-property property">strategy</span><span class="token operator">:</span> <span class="token string">'isMobile'</span><span class="token punctuation">,</span> 
+        <span class="token literal-property property">errorMsg</span><span class="token operator">:</span> <span class="token string">'手机号码格式不正确'</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">var</span> errorMsg <span class="token operator">=</span> validator<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">return</span> errorMsg<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+registerForm<span class="token punctuation">.</span><span class="token function-variable function">onsubmit</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token keyword">var</span> errorMsg <span class="token operator">=</span> <span class="token function">validataFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> errorMsg <span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        <span class="token function">alert</span> <span class="token punctuation">(</span> errorMsg <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_2-小结"><a href="#_2-小结" class="header-anchor">#</a> 2.小结</h2> <p>策略模式是一种常用且有效的设计模式，本章提供了计算奖金、缓动动画、表单校验这三个
+例子来加深大家对策略模式的理解。从这三个例子中，我们可以总结出策略模式的一些优点。
+ 策略模式利用组合、委托和多态等技术和思想，可以有效地避免多重条件选择语句。
+ 策略模式提供了对开放—封闭原则的完美支持，将算法封装在独立的 strategy 中，使得它
+们易于切换，易于理解，易于扩展。
+ 策略模式中的算法也可以复用在系统的其他地方，从而避免许多重复的复制粘贴工作。
+ 在策略模式中利用组合和委托来让 Context 拥有执行算法的能力，这也是继承的一种更轻
+便的替代方案。
+当然，策略模式也有一些缺点，但这些缺点并不严重。
+首先，使用策略模式会在程序中增加许多策略类或者策略对象，但实际上这比把它们负责的
+逻辑堆砌在 Context 中要好。
+其次，要使用策略模式，必须了解所有的 strategy，必须了解各个 strategy 之间的不同点，
+这样才能选择一个合适的 strategy。比如，我们要选择一种合适的旅游出行路线，必须先了解选
+择飞机、火车、自行车等方案的细节。此时 strategy 要向客户暴露它的所有实现，这是违反最少
+知识原则的。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/1degrees/edit/master/docs/Frame/dp.11.md" target="_blank" rel="noopener noreferrer">GitHub主页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Frame/dp.10.html" class="prev">
+        命令模式
+      </a></span> <span class="next"><a href="/Frame/dp.12.html">
+        适配器模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3fb25db5.js" defer></script><script src="/assets/js/2.59014ece.js" defer></script><script src="/assets/js/1.1ee2bd06.js" defer></script><script src="/assets/js/57.f2a3c077.js" defer></script>
+  </body>
+</html>

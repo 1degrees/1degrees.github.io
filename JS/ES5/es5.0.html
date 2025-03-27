@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、 基本概念 | 灯塔</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="前端技术学习交流分享">
+    
+    <link rel="preload" href="/assets/css/0.styles.9e9c6398.css" as="style"><link rel="preload" href="/assets/js/app.3fb25db5.js" as="script"><link rel="preload" href="/assets/js/2.59014ece.js" as="script"><link rel="preload" href="/assets/js/1.1ee2bd06.js" as="script"><link rel="preload" href="/assets/js/69.d47f7ab3.js" as="script"><link rel="prefetch" href="/assets/js/10.1deac060.js"><link rel="prefetch" href="/assets/js/100.71e6a0a8.js"><link rel="prefetch" href="/assets/js/101.6d133a64.js"><link rel="prefetch" href="/assets/js/102.45a9facf.js"><link rel="prefetch" href="/assets/js/103.f4c6968c.js"><link rel="prefetch" href="/assets/js/104.bb576e80.js"><link rel="prefetch" href="/assets/js/105.557c9629.js"><link rel="prefetch" href="/assets/js/106.b414582a.js"><link rel="prefetch" href="/assets/js/107.18a13540.js"><link rel="prefetch" href="/assets/js/11.ab35c24e.js"><link rel="prefetch" href="/assets/js/12.cc133464.js"><link rel="prefetch" href="/assets/js/13.2f71f789.js"><link rel="prefetch" href="/assets/js/14.03825d58.js"><link rel="prefetch" href="/assets/js/15.ea37f0ce.js"><link rel="prefetch" href="/assets/js/16.14e11910.js"><link rel="prefetch" href="/assets/js/17.d82649f9.js"><link rel="prefetch" href="/assets/js/18.23f702ad.js"><link rel="prefetch" href="/assets/js/19.ef644c8b.js"><link rel="prefetch" href="/assets/js/20.6846ea6c.js"><link rel="prefetch" href="/assets/js/21.af3c54b5.js"><link rel="prefetch" href="/assets/js/22.350028a7.js"><link rel="prefetch" href="/assets/js/23.6fbf7b26.js"><link rel="prefetch" href="/assets/js/24.fe418ed4.js"><link rel="prefetch" href="/assets/js/25.e0c7890d.js"><link rel="prefetch" href="/assets/js/26.2a70f863.js"><link rel="prefetch" href="/assets/js/27.ddc798d7.js"><link rel="prefetch" href="/assets/js/28.d1667085.js"><link rel="prefetch" href="/assets/js/29.b1b60a98.js"><link rel="prefetch" href="/assets/js/3.a1be5b13.js"><link rel="prefetch" href="/assets/js/30.f040d392.js"><link rel="prefetch" href="/assets/js/31.faedaea8.js"><link rel="prefetch" href="/assets/js/32.9a8b4cee.js"><link rel="prefetch" href="/assets/js/33.bdf8f280.js"><link rel="prefetch" href="/assets/js/34.99ad57bc.js"><link rel="prefetch" href="/assets/js/35.21426b80.js"><link rel="prefetch" href="/assets/js/36.56960109.js"><link rel="prefetch" href="/assets/js/37.f31dd627.js"><link rel="prefetch" href="/assets/js/38.4cb67a19.js"><link rel="prefetch" href="/assets/js/39.fb67e8dc.js"><link rel="prefetch" href="/assets/js/4.1015aec1.js"><link rel="prefetch" href="/assets/js/40.ea27eb52.js"><link rel="prefetch" href="/assets/js/41.09beb0d7.js"><link rel="prefetch" href="/assets/js/42.b60ee9b1.js"><link rel="prefetch" href="/assets/js/43.c8d7975c.js"><link rel="prefetch" href="/assets/js/44.da554ec7.js"><link rel="prefetch" href="/assets/js/45.baa5cf19.js"><link rel="prefetch" href="/assets/js/46.11f7ce67.js"><link rel="prefetch" href="/assets/js/47.cfef4d41.js"><link rel="prefetch" href="/assets/js/48.7b140205.js"><link rel="prefetch" href="/assets/js/49.55cb3316.js"><link rel="prefetch" href="/assets/js/5.e20f6a0c.js"><link rel="prefetch" href="/assets/js/50.ff41f546.js"><link rel="prefetch" href="/assets/js/51.951f6c76.js"><link rel="prefetch" href="/assets/js/52.cb686cbd.js"><link rel="prefetch" href="/assets/js/53.fdc0d4ff.js"><link rel="prefetch" href="/assets/js/54.4dcbfbe8.js"><link rel="prefetch" href="/assets/js/55.71243bbf.js"><link rel="prefetch" href="/assets/js/56.f6275a4e.js"><link rel="prefetch" href="/assets/js/57.f2a3c077.js"><link rel="prefetch" href="/assets/js/58.397ba8c6.js"><link rel="prefetch" href="/assets/js/59.1e6ece35.js"><link rel="prefetch" href="/assets/js/6.37a52b4b.js"><link rel="prefetch" href="/assets/js/60.eca7eba7.js"><link rel="prefetch" href="/assets/js/61.0bc7e376.js"><link rel="prefetch" href="/assets/js/62.3c4a2273.js"><link rel="prefetch" href="/assets/js/63.db441081.js"><link rel="prefetch" href="/assets/js/64.495493fb.js"><link rel="prefetch" href="/assets/js/65.ed0d4ded.js"><link rel="prefetch" href="/assets/js/66.6c059870.js"><link rel="prefetch" href="/assets/js/67.fd1a659a.js"><link rel="prefetch" href="/assets/js/68.c4fd4b36.js"><link rel="prefetch" href="/assets/js/7.20fdc500.js"><link rel="prefetch" href="/assets/js/70.fd34ac83.js"><link rel="prefetch" href="/assets/js/71.9a33d11d.js"><link rel="prefetch" href="/assets/js/72.54fa94cb.js"><link rel="prefetch" href="/assets/js/73.7b532e33.js"><link rel="prefetch" href="/assets/js/74.85c3b68e.js"><link rel="prefetch" href="/assets/js/75.eed6a123.js"><link rel="prefetch" href="/assets/js/76.abd576fb.js"><link rel="prefetch" href="/assets/js/77.c860701b.js"><link rel="prefetch" href="/assets/js/78.3e37c795.js"><link rel="prefetch" href="/assets/js/79.a367f544.js"><link rel="prefetch" href="/assets/js/80.96ce1a04.js"><link rel="prefetch" href="/assets/js/81.e5fe00e5.js"><link rel="prefetch" href="/assets/js/82.f54029d3.js"><link rel="prefetch" href="/assets/js/83.050c4cd3.js"><link rel="prefetch" href="/assets/js/84.359b2fc3.js"><link rel="prefetch" href="/assets/js/85.ac711251.js"><link rel="prefetch" href="/assets/js/86.a299c2a1.js"><link rel="prefetch" href="/assets/js/87.b54ab847.js"><link rel="prefetch" href="/assets/js/88.190f7a17.js"><link rel="prefetch" href="/assets/js/89.c1ad7c69.js"><link rel="prefetch" href="/assets/js/90.0459cbfa.js"><link rel="prefetch" href="/assets/js/91.c5069a30.js"><link rel="prefetch" href="/assets/js/92.7f7a43ab.js"><link rel="prefetch" href="/assets/js/93.ba928c0a.js"><link rel="prefetch" href="/assets/js/94.54b8a7fb.js"><link rel="prefetch" href="/assets/js/95.f79c75c3.js"><link rel="prefetch" href="/assets/js/96.5cee52a2.js"><link rel="prefetch" href="/assets/js/97.bdcc701a.js"><link rel="prefetch" href="/assets/js/98.7b88176b.js"><link rel="prefetch" href="/assets/js/99.4c22f92f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.02634ae8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9e9c6398.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">灯塔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link router-link-active">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Frame/" class="nav-link">
+  框架思维
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link router-link-active">
+  JS基础
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS基础
+</a></div><div class="nav-item"><a href="/Net/" class="nav-link">
+  网络协议
+</a></div><div class="nav-item"><a href="/ALG/" class="nav-link">
+  常用算法
+</a></div><div class="nav-item"><a href="/Utils/" class="nav-link">
+  工具箱
+</a></div> <a href="https://github.com/1degrees" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS发展历程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ES5语法详解</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JS/ES5/es5.0.html" aria-current="page" class="active sidebar-link">一、 基本概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_1-基本概念" class="sidebar-link">1 基本概念</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_2-关键字和保留字" class="sidebar-link">2 关键字和保留字</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_3-变量" class="sidebar-link">3 变量</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_4-数据类型" class="sidebar-link">4 数据类型</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_5-操作符" class="sidebar-link">5 操作符</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_6-语句" class="sidebar-link">6 语句</a></li><li class="sidebar-sub-header"><a href="/JS/ES5/es5.0.html#_7-函数" class="sidebar-link">7 函数</a></li></ul></li><li><a href="/JS/ES5/es5.1.html" class="sidebar-link">二、 变量、作用域和内存问题.</a></li><li><a href="/JS/ES5/es5.2.html" class="sidebar-link">三、 引用类型</a></li><li><a href="/JS/ES5/es5.3.html" class="sidebar-link">四、 面向对象的程序设计</a></li><li><a href="/JS/ES5/es5.4.html" class="sidebar-link">五、 异步操作</a></li><li><a href="/JS/ES5/es5.5.html" class="sidebar-link">六、 DOM</a></li><li><a href="/JS/ES5/es5.6.html" class="sidebar-link">七、 事件</a></li><li><a href="/JS/ES5/es5.7.html" class="sidebar-link">八、 浏览器模型</a></li><li><a href="/JS/ES5/es5.8.html" class="sidebar-link">九、 网页元素接口拓展</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6新增特性</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一、-基本概念"><a href="#一、-基本概念" class="header-anchor">#</a> 一、 基本概念</h1> <h2 id="_1-基本概念"><a href="#_1-基本概念" class="header-anchor">#</a> 1 基本概念</h2> <ul><li><p>1.1 语法
+ECMAScript 的语法大量借鉴了C 及其他类C 语言（如Java 和Perl）的语法。因此，熟悉这些语言
+的开发人员在接受ECMAScript 更加宽松的语法时，一定会有一种轻松自在的感觉。</p></li> <li><p>1.1.1 区分大小写
+要理解的第一个概念就是ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。这也就
+意味着，变量名test 和变量名Test 分别表示两个不同的变量，而函数名不能使用typeof，因为它
+是一个关键字（3.2 节介绍关键字），但typeOf 则完全可以是一个有效的函数名。</p></li> <li><p>1.1.2 标识符
+所谓标识符，就是指变量、函数、属性的名字，或者函数的参数。标识符可以是按照下列格式规则
+组合起来的一或多个字符：</p> <ul><li>第一个字符必须是一个字母、下划线（_）或一个美元符号（$）；</li> <li>其他字符可以是字母、下划线、美元符号或数字。
+标识符中的字母也可以包含扩展的ASCII 或Unicode 字母字符（如À和Æ），但我们不推荐这样做。
+按照惯例，ECMAScript 标识符采用驼峰大小写格式，也就是第一个字母小写，剩下的每个单词的
+首字母大写，例如：</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>firstSecond
+myCar
+doSomethingImportant
+</code></pre></div><p>虽然没有谁强制要求必须采用这种格式，但为了与ECMAScript 内置的函数和对象命名格式保持一
+致，可以将其当作一种最佳实践。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>不能把关键字、保留字、true、false 和null 用作标识符。3.2 节将介绍更多相
+关内容</p></div> <ul><li>1.1.3 注释
+ECMAScript 使用C 风格的注释，包括单行注释和块级注释。单行注释以两个斜杠开头，如下所示：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token comment">// 单行注释</span>
+</code></pre></div><p>块级注释以一个斜杠和一个星号（/<em>）开头，以一个星号和一个斜杠（</em>/）结尾，如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token comment">/*
+    * 这是一个多行
+    * （块级）注释
+    */</span>
+</code></pre></div><p>虽然上面注释中的第二和第三行都以一个星号开头，但这不是必需的。之所以添加那两个星号，纯
+粹是为了提高注释的可读性（这种格式在企业级应用中用得比较多）。</p> <ul><li>1.1.4 严格模式
+ECMAScript 5 引入了严格模式（strict mode）的概念。严格模式是为JavaScript 定义了一种不同的
+解析与执行模型。在严格模式下，ECMAScript 3 中的一些不确定的行为将得到处理，而且对某些不安全
+的操作也会抛出错误。要在整个脚本中启用严格模式，可以在顶部添加如下代码：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token string">&quot;use strict&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>这行代码看起来像是字符串，而且也没有赋值给任何变量，但其实它是一个编译指示（pragma），
+用于告诉支持的JavaScript 引擎切换到严格模式。这是为不破坏ECMAScript 3 语法而特意选定的语法。
+在函数内部的上方包含这条编译指示，也可以指定函数在严格模式下执行：</p> <div class="language-js extra-class"><pre class="language-js"><code>   <span class="token keyword">function</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token string">&quot;use strict&quot;</span><span class="token punctuation">;</span>
+   <span class="token comment">//函数体</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><p>严格模式下，JavaScript 的执行结果会有很大不同，因此本书将会随时指出严格模式下的区别。支
+持严格模式的浏览器包括IE10+、Firefox 4+、Safari 5.1+、Opera 12+和Chrome。</p> <ul><li>1.1.5 语句
+ECMAScript 中的语句以一个分号结尾；如果省略分号，则由解析器确定语句的结尾，如下例所示：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> sum <span class="token operator">=</span> a <span class="token operator">+</span> b <span class="token comment">// 即使没有分号也是有效的语句——不推荐</span>
+    <span class="token keyword">var</span> diff <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span> <span class="token comment">// 有效的语句——推荐</span>
+</code></pre></div><p>虽然语句结尾的分号不是必需的，但我们建议任何时候都不要省略它。因为加上这个分号可以避免
+很多错误（例如不完整的输入），开发人员也可以放心地通过删除多余的空格来压缩ECMAScript 代码（代
+码行结尾处没有分号会导致压缩错误）。另外，加上分号也会在某些情况下增进代码的性能，因为这样
+解析器就不必再花时间推测应该在哪里插入分号了。</p> <p>可以使用C 风格的语法把多条语句组合到一个代码块中，即代码块以左花括号（{）开头，以右花
+括号（}）结尾：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">if</span> <span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    test <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>虽然条件控制语句（如if 语句）只在执行多条语句的情况下才要求使用代码块，但最佳实践是始
+终在控制语句中使用代码块——即使代码块中只有一条语句，例如：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">if</span> <span class="token punctuation">(</span>test<span class="token punctuation">)</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 有效但容易出错，不要使用</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 推荐使用</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre></div><p>在控制语句中使用代码块可以让编码意图更加清晰，而且也能降低修改代码时出错的几率。</p> <h2 id="_2-关键字和保留字"><a href="#_2-关键字和保留字" class="header-anchor">#</a> 2 关键字和保留字</h2> <p>ECMA-262 描述了一组具有特定用途的关键字，这些关键字可用于表示控制语句的开始或结束，或
+者用于执行特定操作等。按照规则，关键字也是语言保留的，不能用作标识符。以下就是ECMAScript
+的全部关键字（带*号上标的是第5 版新增的关键字）：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">break</span> <span class="token keyword">do</span> <span class="token keyword">instanceof</span> <span class="token class-name">typeof</span>
+<span class="token keyword">case</span> <span class="token keyword">else</span> <span class="token keyword">new</span> <span class="token class-name">var</span>
+<span class="token keyword">catch</span> finally <span class="token keyword">return</span> <span class="token keyword">void</span>
+<span class="token keyword">continue</span> <span class="token keyword">for</span> <span class="token keyword">switch</span> <span class="token keyword">while</span>
+<span class="token keyword">debugger</span><span class="token operator">*</span> <span class="token keyword">function</span> <span class="token keyword">this</span> <span class="token keyword">with</span>
+<span class="token keyword">default</span> <span class="token keyword">if</span> <span class="token keyword">throw</span>
+<span class="token keyword">delete</span> <span class="token keyword">in</span> <span class="token keyword">try</span>
+</code></pre></div><p>ECMA-262 还描述了另外一组不能用作标识符的保留字。尽管保留字在这门语言中还没有任何特定
+的用途，但它们有可能在将来被用作关键字。以下是ECMA-262 第3 版定义的全部保留字：</p> <div class="language-js extra-class"><pre class="language-js"><code>abstract <span class="token keyword">enum</span> int short
+boolean <span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">static</span>
+byte <span class="token keyword">extends</span> <span class="token class-name">long</span> <span class="token keyword">super</span>
+char final native synchronized
+<span class="token keyword">class</span> <span class="token class-name">float</span> <span class="token keyword">package</span> throws
+<span class="token keyword">const</span> goto <span class="token keyword">private</span> transient
+<span class="token keyword">debugger</span> <span class="token keyword">implements</span> <span class="token class-name">protected</span> volatile
+double <span class="token keyword">import</span> <span class="token keyword">public</span>
+</code></pre></div><p>第5 版把在非严格模式下运行时的保留字缩减为下列这些：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">enum</span> <span class="token keyword">extends</span> <span class="token class-name">super</span>
+<span class="token keyword">const</span> <span class="token keyword">export</span> <span class="token keyword">import</span>
+</code></pre></div><p>在严格模式下，第5 版还对以下保留字施加了限制：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">implements</span> <span class="token class-name">package</span> <span class="token keyword">public</span>
+<span class="token keyword">interface</span> <span class="token class-name">private</span> <span class="token keyword">static</span>
+<span class="token keyword">let</span> <span class="token keyword">protected</span> <span class="token keyword">yield</span>
+</code></pre></div><p>注意，let 和yield 是第5 版新增的保留字；其他保留字都是第3 版定义的。为了最大程度地保
+证兼容性，建议读者将第3 版定义的保留字外加let 和yield 作为编程时的参考。
+在实现ECMAScript 3 的JavaScript 引擎中使用关键字作标识符，会导致“Identifier Expected”错误。
+而使用保留字作标识符可能会也可能不会导致相同的错误，具体取决于特定的引擎。
+第5 版对使用关键字和保留字的规则进行了少许修改。关键字和保留字虽然仍然不能作为标识符使
+用，但现在可以用作对象的属性名。一般来说，最好都不要使用关键字和保留字作为标识符和属性名，
+以便与将来的ECMAScript 版本兼容。
+除了上面列出的保留字和关键字，ECMA-262 第5 版对eval 和arguments 还施加了限制。在严
+格模式下，这两个名字也不能作为标识符或属性名，否则会抛出错误。</p> <h2 id="_3-变量"><a href="#_3-变量" class="header-anchor">#</a> 3 变量</h2> <p>ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，
+每个变量仅仅是一个用于保存值的占位符而已。定义变量时要使用var 操作符（注意var 是一个关键
+字），后跟变量名（即一个标识符），如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> message<span class="token punctuation">;</span>
+</code></pre></div><p>这行代码定义了一个名为message 的变量，该变量可以用来保存任何值（像这样未经过初始化的
+变量，会保存一个特殊的值——undefined，相关内容将在3.4 节讨论）。ECMAScript 也支持直接初始
+化变量，因此在定义变量的同时就可以设置变量的值，如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>在此，变量message 中保存了一个字符串值&quot;hi&quot;。像这样初始化变量并不会把它标记为字符串类型；
+初始化的过程就是给变量赋一个值那么简单。因此，可以在修改变量值的同时修改值的类型，如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span>
+message <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment">// 有效，但不推荐</span>
+</code></pre></div><p>在这个例子中，变量message 一开始保存了一个字符串值&quot;hi&quot;，然后该值又被一个数字值100 取
+代。虽然我们不建议修改变量所保存值的类型，但这种操作在ECMAScript 中完全有效。
+有一点必须注意，即用var 操作符定义的变量将成为定义该变量的作用域中的局部变量。也就是说，
+如果在函数中使用var 定义一个变量，那么这个变量在函数退出后就会被销毁，例如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 局部变量</span>
+<span class="token punctuation">}</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 错误！</span>
+</code></pre></div><p>这里，变量message 是在函数中使用var 定义的。当函数被调用时，就会创建该变量并为其赋值。
+而在此之后，这个变量又会立即被销毁，因此例子中的下一行代码就会导致错误。不过，可以像下面这
+样省略var 操作符，从而创建一个全局变量：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 全局变量</span>
+<span class="token punctuation">}</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;hi&quot;</span>
+</code></pre></div><p>这个例子省略了var 操作符，因而message 就成了全局变量。这样，只要调用过一次test()函
+数，这个变量就有了定义，就可以在函数外部的任何地方被访问到。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>虽然省略var 操作符可以定义全局变量，但这也不是我们推荐的做法。因为在局
+部作用域中定义的全局变量很难维护，而且如果有意地忽略了var 操作符，也会由于
+相应变量不会马上就有定义而导致不必要的混乱。给未经声明的变量赋值在严格模式
+下会导致抛出ReferenceError 错误。</p></div> <p>可以使用一条语句定义多个变量，只要像下面这样把每个变量（初始化或不初始化均可）用逗号分
+隔开即可：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">,</span>
+found <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+age <span class="token operator">=</span> <span class="token number">29</span><span class="token punctuation">;</span>
+</code></pre></div><p>这个例子定义并初始化了3 个变量。同样由于ECMAScript 是松散类型的，因而使用不同类型初始
+化变量的操作可以放在一条语句中来完成。虽然代码里的换行和变量缩进不是必需的，但这样做可以提
+高可读性。
+在严格模式下，不能定义名为eval 或arguments 的变量，否则会导致语法错误。</p> <h2 id="_4-数据类型"><a href="#_4-数据类型" class="header-anchor">#</a> 4 数据类型</h2> <p>ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number
+和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。ECMAScript
+不支持任何创建自定义类型的机制，而所有值最终都将是上述6 种数据类型之一。乍一看，好像只有6
+种数据类型不足以表示所有数据；但是，由于ECMAScript 数据类型具有动态性，因此的确没有再定义
+其他数据类型的必要了。</p> <ul><li><p>4.1 typeof操作符</p> <p>鉴于ECMAScript 是松散类型的，因此需要有一种手段来检测给定变量的数据类型——typeof 就
+是负责提供这方面信息的操作符。对一个值使用typeof 操作符可能返回下列某个字符串：</p> <ul><li>&quot;undefined&quot;——如果这个值未定义；</li> <li>&quot;boolean&quot;——如果这个值是布尔值；</li> <li>&quot;string&quot;——如果这个值是字符串；</li> <li>&quot;number&quot;——如果这个值是数值；</li> <li>&quot;object&quot;——如果这个值是对象或null；</li> <li>&quot;function&quot;——如果这个值是函数。
+下面是几个使用typeof 操作符的例子：</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;some string&quot;</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;string&quot;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;string&quot;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token number">95</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;number&quot;</span>
+</code></pre></div><p>这几个例子说明，typeof 操作符的操作数可以是变量（message），也可以是数值字面量。注意，
+typeof 是一个操作符而不是函数，因此例子中的圆括号尽管可以使用，但不是必需的。
+有些时候，typeof 操作符会返回一些令人迷惑但技术上却正确的值。比如，调用typeof null
+会返回&quot;object&quot;，因为特殊值null 被认为是一个空的对象引用。Safari 5 及之前版本、Chrome 7 及之
+前版本在对正则表达式调用typeof 操作符时会返回&quot;function&quot;，而其他浏览器在这种情况下会返回
+&quot;object&quot;。</p> <div class="language-tips extra-class"><pre class="language-text"><code>    从技术角度讲，函数在ECMAScript 中是对象，不是一种数据类型。然而，函数也
+    确实有一些特殊的属性，因此通过typeof 操作符来区分函数和其他对象是有必要的。
+</code></pre></div><ul><li><p>4.2 Undefined类型</p> <p>Undefined 类型只有一个值，即特殊的undefined。在使用var 声明变量但未对其加以初始化时，
+这个变量的值就是undefined</p></li> <li><p>4.3 Null类型</p> <p>Null 类型是第二个只有一个值的数据类型，这个特殊的值是null。从逻辑角度来看，null 值表
+示一个空对象指针，而这也正是使用typeof 操作符检测null 值时会返回&quot;object&quot;的原因</p></li> <li><p>4.4 Boolean类型</p></li></ul> <p>Boolean 类型是ECMAScript 中使用得最多的一种类型，该类型只有两个字面值：true 和false。
+这两个值与数字值不是一回事，因此true 不一定等于1，而false 也不一定等于0。</p> <ul><li>4.5 Number类型</li></ul> <p>Number 类型应该是ECMAScript 中最令人关注的数据类型了，这种类型使用IEEE754 格式来表示
+整数和浮点数值（浮点数值在某些语言中也被称为双精度数值）。为支持各种数值类型，ECMA-262 定
+义了不同的数值字面量格式。</p> <ul><li>4.6 String类型</li></ul> <p>String 类型用于表示由零或多个16 位Unicode 字符组成的字符序列，即字符串。字符串可以由双
+引号（&quot;）或单引号（'）表示</p> <ul><li>4.7 Object类型</li></ul> <p>ECMAScript 中的对象其实就是一组数据和功能的集合。对象可以通过执行new 操作符后跟要创建
+的对象类型的名称来创建。而创建Object 类型的实例并为其添加属性和（或）方法，就可以创建自定
+义对象，如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这个语法与Java 中创建对象的语法相似；但在ECMAScript 中，如果不给构造函数传递参数，则可
+以省略后面的那一对圆括号。也就是说，在像前面这个示例一样不传递参数的情况下，完全可以省略那
+对圆括号（但这不是推荐的做法）：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">;</span> <span class="token comment">// 有效，但不推荐省略圆括号</span>
+</code></pre></div><p>仅仅创建Object 的实例并没有什么用处，但关键是要理解一个重要的思想：即在ECMAScript 中，
+（就像Java 中的java.lang.Object 对象一样）Object 类型是所有它的实例的基础。换句话说，
+Object 类型所具有的任何属性和方法也同样存在于更具体的对象中。
+Object 的每个实例都具有下列属性和方法。</p> <ul><li>constructor：保存着用于创建当前对象的函数。对于前面的例子而言，构造函数（constructor）
+就是Object()。</li> <li>hasOwnProperty(propertyName)：用于检查给定的属性在当前对象实例中（而不是在实例
+的原型中）是否存在。其中，作为参数的属性名（propertyName）必须以字符串形式指定（例
+如：o.hasOwnProperty(&quot;name&quot;)）。</li> <li>isPrototypeOf(object)：用于检查传入的对象是否是传入对象的原型（第5 章将讨论原
+型）。</li> <li>propertyIsEnumerable(propertyName)：用于检查给定的属性是否能够使用for-in 语句
+（本章后面将会讨论）来枚举。与hasOwnProperty()方法一样，作为参数的属性名必须以字符
+串形式指定。</li> <li>toLocaleString()：返回对象的字符串表示，该字符串与执行环境的地区对应。</li> <li>toString()：返回对象的字符串表示。</li> <li>valueOf()：返回对象的字符串、数值或布尔值表示。通常与toString()方法的返回值
+相同。
+由于在ECMAScript 中Object 是所有对象的基础，因此所有对象都具有这些基本的属性和方法。
+第5 章和第6 章将详细介绍Object 与其他对象的关系。</li></ul> <div class="language-tips extra-class"><pre class="language-text"><code>    从技术角度讲，ECMA-262 中对象的行为不一定适用于JavaScript 中的其他对象。
+    浏览器环境中的对象，比如BOM 和DOM 中的对象，都属于宿主对象，因为它们是
+    由宿主实现提供和定义的。ECMA-262 不负责定义宿主对象，因此宿主对象可能会也
+    可能不会继承Object。
+</code></pre></div><h2 id="_5-操作符"><a href="#_5-操作符" class="header-anchor">#</a> 5 操作符</h2> <p>ECMA-262 描述了一组用于操作数据值的操作符，包括算术操作符（如加号和减号）、位操作符、
+关系操作符和相等操作符。ECMAScript 操作符的与众不同之处在于，它们能够适用于很多值，例如字
+符串、数字值、布尔值，甚至对象。不过，在应用于对象时，相应的操作符通常都会调用对象的valueOf()
+和（或）toString()方法，以便取得可以操作的值。</p> <ul><li><p>5.1 一元操作符</p> <ul><li>递增操作符 ++</li> <li>递减操作符 --</li> <li>加操作符 +</li> <li>减操作符 -</li></ul></li> <li><p>5.2 布尔操作符</p> <ol><li>逻辑非</li></ol> <p>逻辑非操作符由一个叹号（！）表示，可以应用于ECMAScript 中的任何值。无论这个值是什么数据
+类型，这个操作符都会返回一个布尔值。逻辑非操作符首先会将它的操作数转换为一个布尔值，然后再
+对其求反。也就是说，逻辑非操作符遵循下列规则：</p> <ul><li>如果操作数是一个对象，返回false；</li> <li>如果操作数是一个空字符串，返回true；</li> <li>如果操作数是一个非空字符串，返回false；</li> <li>如果操作数是数值0，返回true；</li> <li>如果操作数是任意非0 数值（包括Infinity），返回false；</li> <li>如果操作数是null，返回true；</li> <li>如果操作数是NaN，返回true；</li> <li>如果操作数是undefined，返回true。</li></ul> <p>逻辑非操作符也可以用于将一个值转换为与其对应的布尔值。而同时使用两个逻辑非操作符，实际
+上就会模拟Boolean()转型函数的行为。其中，第一个逻辑非操作会基于无论什么操作数返回一个布
+尔值，而第二个逻辑非操作则对该布尔值求反，于是就得到了这个值真正对应的布尔值。当然，最终结
+果与对这个值使用Boolean()函数相同，如下面的例子所示：</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">alert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token string">&quot;blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token number">12345</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+
+</code></pre></div><p>2.逻辑与
+逻辑与操作符由两个和号（&amp;&amp;）表示，有两个操作数，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">false</span>
+</code></pre></div><ul><li>如果第一个操作数是对象，则返回第二个操作数；</li> <li>如果第二个操作数是对象，则只有在第一个操作数的求值结果为true 的情况下才会返回该
+对象；</li> <li>如果两个操作数都是对象，则返回第二个操作数；</li> <li>如果有一个操作数是null，则返回null；</li> <li>如果有一个操作数是NaN，则返回NaN；</li> <li>如果有一个操作数是undefined，则返回undefined。</li></ul> <p>3.逻辑或
+逻辑或操作符由两个竖线符号（||）表示，有两个操作数，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</code></pre></div><p>与逻辑与操作相似，如果有一个操作数不是布尔值，逻辑或也不一定返回布尔值；此时，它遵循下
+列规则：</p> <ul><li>如果第一个操作数是对象，则返回第一个操作数；</li> <li>如果第一个操作数的求值结果为false，则返回第二个操作数；</li> <li>如果两个操作数都是对象，则返回第一个操作数；</li> <li>如果两个操作数都是null，则返回null；</li> <li>如果两个操作数都是NaN，则返回NaN；</li> <li>如果两个操作数都是undefined，则返回undefined。</li></ul> <ul><li><p>5.3 乘性操作符</p> <ol><li>乘法</li></ol> <p>乘法操作符由一个星号（*）表示，用于计算两个数值的乘积。其语法类似于C，如下面的例子
+所示：</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token number">34</span> <span class="token operator">*</span> <span class="token number">56</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="2"><li>除法</li></ol> <p>除法操作符由一个斜线符号（/）表示，执行第二个操作数除第一个操作数的计算，如下面的例子
+所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token number">66</span> <span class="token operator">/</span> <span class="token number">11</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="3"><li>求模</li></ol> <p>求模（余数）操作符由一个百分号（%）表示，用法如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token number">26</span> <span class="token operator">%</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// 等于1</span>
+</code></pre></div><ul><li>3.5.4 关系操作符</li></ul> <p>小于（&lt;）、大于（&gt;）、小于等于（&lt;=）和大于等于（&gt;=）这几个关系操作符用于对两个值进行比
+较，比较的规则与我们在数学课上所学的一样。这几个操作符都返回一个布尔值，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> result1 <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+<span class="token keyword">var</span> result2 <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+</code></pre></div><ul><li><p>3.5.5 相等操作符</p> <ul><li><p>相等和不相等——先转换再比较，全等和不  (==)  (!=)</p></li> <li><p>全等——仅比较而不转换。 (===) (!==)</p></li></ul></li> <li><p>3.5.6 条件操作符</p> <p>条件操作符应该算是ECMAScript 中最灵活的一种操作符了，而且它遵循与Java 中的条件操作符相
+同的语法形式，如下面的例子所示：</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>variable <span class="token operator">=</span> boolean_expression <span class="token operator">?</span> true_value <span class="token operator">:</span> false_value<span class="token punctuation">;</span>
+</code></pre></div><ul><li>3.5.7 赋值操作符</li></ul> <p>简单的赋值操作符由等于号（=）表示，其作用就是把右侧的值赋给左侧的变量，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>乘/赋值（*=）；</li> <li>除/赋值（/=）；</li> <li>模/赋值（%=）；</li> <li>加/赋值（+=）；</li> <li>减/赋值（=）；</li> <li>左移/赋值（&lt;&lt;=）；</li> <li>有符号右移/赋值（&gt;&gt;=）</li> <li>无符号右移/赋值（&gt;&gt;&gt;=）。</li></ul> <p>设计这些操作符的主要目的就是简化赋值操作。使用它们不会带来任何性能的提升。</p> <ul><li>3.5.8 逗号操作符</li></ul> <p>使用逗号操作符可以在一条语句中执行多个操作，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> num1<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> num2<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> num3<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+</code></pre></div><p>逗号操作符多用于声明多个变量；但除此之外，逗号操作符还可以用于赋值。在用于赋值时，逗号
+操作符总会返回表达式中的最后一项，如下面的例子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// num 的值为0</span>
+</code></pre></div><p>由于0 是表达式中的最后一项，因此num 的值就是0。虽然逗号的这种使用方式并不常见，但这个
+例子可以帮我们理解逗号的这种行为。</p> <h2 id="_6-语句"><a href="#_6-语句" class="header-anchor">#</a> 6 语句</h2> <ul><li>6.1 if语句</li></ul> <p>大多数编程语言中最为常用的一个语句就是if 语句。以下是if 语句的语法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> statement1 <span class="token keyword">else</span> statement2
+</code></pre></div><p>或者</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> statement1 <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> statement2 <span class="token keyword">else</span> statement3
+</code></pre></div><ul><li>6.2 do-while语句</li></ul> <p>do-while 语句是一种后测试循环语句，即只有在循环体中的代码执行之后，才会测试出口条件。
+换句话说，在对条件表达式求值之前，循环体内的代码至少会被执行一次。以下是do-while 语句的
+语法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">do</span> <span class="token punctuation">{</span>
+    statement
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//下面是一个示例：</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-tips extra-class"><pre class="language-text"><code>    像do-while 这种后测试循环语句最常用于循环体中的代码至少要被执行一次的
+    情形。
+</code></pre></div><ul><li>6.3 while语句</li></ul> <p>while 语句属于前测试循环语句，也就是说，在循环体内的代码被执行之前，就会对出口条件求值。
+因此，循环体内的代码有可能永远不会被执行。以下是while 语句的语法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">while</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span> statement
+<span class="token comment">// 下面是一个示例：</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>6.4 for语句
+for 语句也是一种前测试循环语句，但它具有在执行循环之前初始化变量和定义循环后要执行的代
+码的能力。以下是for 语句的语法：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span>initialization<span class="token punctuation">;</span> expression<span class="token punctuation">;</span> post<span class="token operator">-</span>loop<span class="token operator">-</span>expression<span class="token punctuation">)</span> statement
+<span class="token comment">// 下面是一个示例：</span>
+<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>6.5 for-in语句</li></ul> <p>for-in 语句是一种精准的迭代语句，可以用来枚举对象的属性。以下是for-in 语句的语法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span>property <span class="token keyword">in</span> expression<span class="token punctuation">)</span> statement
+<span class="token comment">// 下面是一个示例：</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> propName <span class="token keyword">in</span> window<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>propName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>6.6 label语句
+使用label 语句可以在代码中添加标签，以便将来使用。以下是label 语句的语法：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token literal-property property">label</span><span class="token operator">:</span> statement
+<span class="token comment">// 下面是一个示例：</span>
+<span class="token literal-property property">start</span><span class="token operator">:</span> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个例子中定义的start 标签可以在将来由break 或continue 语句引用。加标签的语句一般都
+要与for 语句等循环语句配合使用。</p> <ul><li>6.7 break和continue语句</li></ul> <p>break 和continue 语句用于在循环中精确地控制代码的执行。其中，break 语句会立即退出循环，
+强制继续执行循环后面的语句。而continue 语句虽然也是立即退出循环，但退出循环后会从循环的顶
+部继续执行。请看下面的例子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    num<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//4</span>
+</code></pre></div><ul><li>6.8 with语句</li></ul> <p>with 语句的作用是将代码的作用域设置到一个特定的对象中。with 语句的语法如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">with</span> <span class="token punctuation">(</span>expression<span class="token punctuation">)</span> statement<span class="token punctuation">;</span>
+<span class="token comment">// 定义with 语句的目的主要是为了简化多次编写同一个对象的工作，如下面的例子所示：</span>
+<span class="token keyword">var</span> qs <span class="token operator">=</span> location<span class="token punctuation">.</span>search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> hostName <span class="token operator">=</span> location<span class="token punctuation">.</span>hostname<span class="token punctuation">;</span>
+<span class="token keyword">var</span> url <span class="token operator">=</span> location<span class="token punctuation">.</span>href<span class="token punctuation">;</span>
+ <span class="token comment">// 上面几行代码都包含location 对象。如果使用with 语句，可以把上面的代码改写成如下所示：</span>
+<span class="token keyword">with</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> qs <span class="token operator">=</span> search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> hostName <span class="token operator">=</span> hostname<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> url <span class="token operator">=</span> href<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>6.9 switch语句</p> <p>switch 语句与if 语句的关系最为密切，而且也是在其他语言中普遍使用的一种流控制语句。
+ECMAScript 中switch 语句的语法与其他基于C 的语言非常接近，如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">switch</span> <span class="token punctuation">(</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value</span><span class="token operator">:</span> statement
+<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value</span><span class="token operator">:</span> statement
+<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value</span><span class="token operator">:</span> statement
+<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token literal-property property">value</span><span class="token operator">:</span> statement
+<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> statement
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_7-函数"><a href="#_7-函数" class="header-anchor">#</a> 7 函数</h2> <p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、
+任何时候调用执行。ECMAScript 中的函数使用function 关键字来声明，后跟一组参数以及函数体。
+函数的基本语法如下所示：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">functionName</span><span class="token punctuation">(</span><span class="token parameter">arg0<span class="token punctuation">,</span> arg1<span class="token punctuation">,</span><span class="token operator">...</span><span class="token punctuation">,</span>argN</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    statements
+<span class="token punctuation">}</span>
+<span class="token comment">// 以下是一个函数示例：</span>
+<span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> message</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Hello &quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">&quot;,&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>7.1 理解参数</li></ul> <p>在函数体内可以通过arguments 对象来
+访问这个参数数组，从而获取传递给函数的每一个参数。</p> <div class="language-tips extra-class"><pre class="language-text"><code>arguments 对象只是与数组类似（它并不是Array 的实例），因为可以使用方括号语法访
+问它的每一个元素（即第一个元素是arguments[0]，第二个元素是argumetns[1]，以此类推），使
+用length 属性来确定传递进来多少个参数。
+</code></pre></div><ul><li>7.2 没有重载</li></ul> <p>ECMAScript 函数不能像传统意义上那样实现重载。而在其他语言（如Java）中，可以为一个函数
+编写两个定义，只要这两个定义的签名（接受的参数的类型和数量）不同即可。如前所述，ECMAScirpt
+函数没有签名，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可
+能做到的。</p> <p>如果在ECMAScript 中定义了两个名字相同的函数，则该名字只属于后定义的函数。请看下面的例子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">addSomeNumber</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> num <span class="token operator">+</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">addSomeNumber</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> num <span class="token operator">+</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token function">addSomeNumber</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//300</span>
+</code></pre></div><p>在此，函数addSomeNumber()被定义了两次。第一个版本给参数加100，而第二个版本给参数加
+200。由于后定义的函数覆盖了先定义的函数，因此当在最后一行代码中调用这个函数时，返回的结果
+就是300。</p> <p>如前所述，通过检查传入函数中参数的类型和数量并作出不同的反应，可以模仿方法的重载。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/1degrees/edit/master/docs/JS/ES5/es5.0.md" target="_blank" rel="noopener noreferrer">GitHub主页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JS/" class="prev router-link-active">
+        JavaScript语言的历史
+      </a></span> <span class="next"><a href="/JS/ES5/es5.1.html">
+        二、 变量、作用域和内存问题.
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3fb25db5.js" defer></script><script src="/assets/js/2.59014ece.js" defer></script><script src="/assets/js/1.1ee2bd06.js" defer></script><script src="/assets/js/69.d47f7ab3.js" defer></script>
+  </body>
+</html>
