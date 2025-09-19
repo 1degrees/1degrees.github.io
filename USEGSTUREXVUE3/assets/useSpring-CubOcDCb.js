@@ -1,0 +1,1 @@
+import{f as r,b as c}from"./index-CuPCSCL2.js";function f(n){const t=r({x:0,y:0,z:0,scale:1,...n});return[c(()=>{const{x:s,y:e,z:l,scale:p,...o}=t;return{transform:`translate3d(${t.x}px, ${t.y}px, ${t.z}px) scale(${t.scale})`,...o,transition:"0.2s linear"}}),{set:s=>{for(const e in s)s[e]!==void 0&&(t[e]=s[e])}}]}export{f as u};
