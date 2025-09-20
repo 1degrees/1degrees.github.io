@@ -1,0 +1,29 @@
+import{_ as n,c as a,o as i,al as p}from"./chunks/framework.BJ09vWpF.js";const u=JSON.parse('{"title":"useSpring 动画","description":"","frontmatter":{},"headers":[],"relativePath":"en/zh/use-spring.md","filePath":"en/zh/use-spring.md"}'),e={name:"en/zh/use-spring.md"};function l(r,s,t,h,k,c){return i(),a("div",null,[...s[0]||(s[0]=[p(`<h1 id="usespring-动画" tabindex="-1">useSpring 动画 <a class="header-anchor" href="#usespring-动画" aria-label="Permalink to &quot;useSpring 动画&quot;">​</a></h1><h2 id="usespring-动画代码" tabindex="-1">useSpring 动画代码 <a class="header-anchor" href="#usespring-动画代码" aria-label="Permalink to &quot;useSpring 动画代码&quot;">​</a></h2><p>该代码是一个简单的模拟动画的spring效果的代码，案例中多次用到动画效果均使用了该代码。</p><div class="language-vue vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">import { reactive, computed } from &#39;vue&#39;</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">export function useSpring(_props) {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  const props = reactive({ x: 0, y: 0, z: 0, scale: 1, ..._props })</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  // 模拟动画的spring效果   </span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  const style = computed(() =&gt; {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    const { x, y, z, scale, stop, ...others } = props</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    return {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">      transform: \`translate3d(\${props.x}px, \${props.y}px, \${props.z}px) scale(\${props.scale})</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">        \${props.rotateZ ? &#39;rotateZ(&#39; + props.rotateZ + &#39;deg)&#39; : &#39;&#39;}\`,</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">      ...others,</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">      transition: stop ? &#39;none&#39; : &#39;0.2s linear&#39;</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    }</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  })</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  // 模拟动画的spring效果，设置参数</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  const set = (params) =&gt; {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    params.stop = false</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    for (const key in params) {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">      if (params[key] !== undefined) props[key] = params[key]</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    }</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  }</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  // 模拟动画的spring效果，开始动画</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  const start = (params) =&gt; {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    params.stop = true</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    for (const key in params) {</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">      if (params[key] !== undefined) props[key] = params[key]</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">    }</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  }</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">  return [style, { set, start }, props]</span></span>
+<span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE;">}</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div>`,4)])])}const d=n(e,[["render",l]]);export{u as __pageData,d as default};
